@@ -97,10 +97,10 @@ public class MySqlUsuario implements UsuarioDao{
 
             if(resultados.next()){
                 usuario = new Usuario();
-                usuario.setIdUsuario(resultados.getInt("idUsuario"));
-                usuario.setUsuario(resultados.getString("usuario"));
-                usuario.setClave(resultados.getString("clave"));
-                usuario.setCorreo(resultados.getString("correo"));
+                usuario.setIdUsuario(resultados.getInt(1));
+                usuario.setUsuario(resultados.getString(2));
+                usuario.setClave(resultados.getString(3));
+                usuario.setCorreo(resultados.getString(4));
             }
         } catch (SQLException e) {
             throw new ExcepcionGeneral("No se obtuvo al usuario");
@@ -122,10 +122,10 @@ public class MySqlUsuario implements UsuarioDao{
 
             while (resultados.next()){
                 Usuario usuario = new Usuario();
-                usuario.setIdUsuario(resultados.getInt("idUsuario"));
-                usuario.setUsuario(resultados.getString("usuario"));
-                usuario.setClave(resultados.getString("clave"));
-                usuario.setCorreo(resultados.getString("correo"));
+                usuario.setIdUsuario(resultados.getInt(1));
+                usuario.setUsuario(resultados.getString(2));
+                usuario.setClave(resultados.getString(3));
+                usuario.setCorreo(resultados.getString(4));
                 listado.add(usuario);
             }
         } catch (SQLException e) {
